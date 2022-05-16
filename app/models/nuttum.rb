@@ -1,0 +1,2 @@
+class Nuttum < ApplicationRecord
+end

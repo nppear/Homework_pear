@@ -1,0 +1,33 @@
+<%= form_with(model: nuttum) do |form| %>
+  <% if nuttum.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(nuttum.errors.count, "error") %> prohibited this nuttum from being saved:</h2>
+
+      <ul>
+        <% nuttum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :Article, style: "display: block" %>
+    <%= form.text_field :Article %>
+  </div>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <button type="submit" class:"btn btn-primary">Create comment</button>
+    
+  </div>
+<% end %>

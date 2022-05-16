@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @nuttum %>
+
+<div>
+  <%= link_to "Edit this comment", edit_nuttum_path(@nuttum), class:"btn btn-secondary" %> |
+  <%= link_to "Back", nutta_path, class:"btn btn-secondary" %>
+
+</br></br>
+  <%= button_to "Delete", @nuttum, method: :delete,class:"btn btn-danger" %>
+</div>

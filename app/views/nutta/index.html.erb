@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Comment Here!</h1>
+
+<div id="nutta">
+  <% @nutta.each do |nuttum| %>
+    <%= render nuttum %>
+    <p>
+      <%= link_to "Show", nuttum, class:"btn btn-light" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New Comment", new_nuttum_path, class:"btn btn-info" %>
